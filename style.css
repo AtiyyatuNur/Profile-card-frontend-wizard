@@ -1,0 +1,222 @@
+:root {
+    --primary-color: #062f06;
+    --secondary-color: #0c9733;
+    --text-color: #333;
+    --light-bg: #f5f7fa;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    transition: var(--transition);
+}
+
+/* Header section */
+.profile-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.profile-name {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+/* Main content layout */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Avatar section */
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+figcaption {
+    font-style: italic;
+    color: #434040;
+    font-size: 0.9rem;
+}
+
+/* Bio section */
+.profile-bio {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* Time display */
+.time-container {
+    background-color: #f0f4f8;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.time-value {
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Social links */
+.social-nav {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.social-link:hover, 
+.social-link:focus {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.social-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Lists section */
+.lists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hobbies-section,
+.dislikes-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: var(--border-radius);
+}
+
+.section-title {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.hobbies-list,
+.dislikes-list {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.hobbies-list li,
+.dislikes-list li {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.hobbies-list li::before {
+    content: "✓";
+    color: green;
+    position: absolute;
+    left: -15px;
+}
+
+.dislikes-list li::before {
+    content: "✗";
+    color: red;
+    position: absolute;
+    left: -15px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .profile-content {
+        flex-direction: row;
+    }
+
+    .profile-info {
+        flex: 1;
+    }
+
+    .profile-image {
+        flex: 0 0 200px;
+        margin-right: 30px;
+    }
+
+    .lists-container {
+        flex-direction: row;
+    }
+
+    .hobbies-section,
+    .dislikes-section {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Component</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article data-testid="test-profile-card" class="profile-card">
+        <header class="profile-header">
+            <h2 data-testid="test-user-name" class="profile-name">Atiyyatu Nur</h2>
+        </header>
+        
+        <div class="profile-content">
+            <div class="profile-image">
+                <figure>
+                    <img 
+                        data-testid="test-user-avatar" 
+                        src="./assets/adeBeauty.jpg" 
+                        alt="Profile picture of atiyyatu nur"
+                        class="avatar"
+                    >
+                    <figcaption>Software Developer</figcaption>
+                </figure>
+            </div>
+            
+            <div class="profile-info">
+                <p data-testid="test-user-bio" class="profile-bio">
+                    Passionate Software developer with over 2 years of experience building scalable web applications. 
+                    I specialize in Html, CSS, JavaScript, C# and have a keen interest in UX design. When I'm not coding, 
+                    you'll find me experimenting with new recipes in the kitchen.
+                </p>
+                
+                <div class="time-container">
+                    Current time: <span data-testid="test-user-time" class="time-value"></span> ms
+                </div>
+                
+                <nav data-testid="test-user-social-links" class="social-nav">
+                    <ul class="social-links">
+                        <li>
+                            <a 
+                                href="https://x.com/@Temi12960" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-twitter"
+                                class="social-link"
+                            >
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://github.com/AtiyyatuNur" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-github"
+                                class="social-link"
+                            >
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://www.linkedin.com/in/atiyyatu-nur-a4455638b/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-linkedin"
+                                class="social-link"
+                            >
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://www.instagram.com/atiyyatunur" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-instagram"
+                                class="social-link"
+                            >
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="lists-container">
+                    <section class="hobbies-section">
+                        <h3 class="section-title">Hobbies</h3>
+                        <ul data-testid="test-user-hobbies" class="hobbies-list">
+                            <li>Hiking & Mountain Climbing</li>
+                            <li>Photography</li>
+                            <li>Coding</li>
+                            <li>Cooking & Baking</li>
+                            <li>Reading Science Fiction</li>
+                            <li>Playing Guitar</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="dislikes-section">
+                        <h3 class="section-title">Dislikes</h3>
+                        <ul data-testid="test-user-dislikes" class="dislikes-list">
+                            <li>Traffic Jams</li>
+                            <li>Loud Chewing</li>
+                            <li>Early Mornings</li>
+                            <li>Reality TV Shows</li>
+                            <li>Artificial Banana Flavor</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
