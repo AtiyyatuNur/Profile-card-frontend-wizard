@@ -25,8 +25,17 @@ A responsive, accessible profile card component built with semantic HTML, modern
 - test-user-hobbies - Hobbies list
 - test-user-dislikes - Dislikes list
 
-## Live Demo
+  **Complete Project Structure**
 
+profile-card/
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    └── oba.jpg
+
+## Live Demo
+https://profile-card-frontend-wizard.netlify.app/
 
 ## Local Development
 
